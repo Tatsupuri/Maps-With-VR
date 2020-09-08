@@ -15,7 +15,6 @@ public class AssignChildren : MonoBehaviour
                 child.gameObject.AddComponent<MeshChange>();
                 //child.gameObject.GetComponent<MeshChange>().material = mat;
 
-                //child.gameObject.AddComponent<BoxCollider>();
                 child.gameObject.AddComponent<MeshCollider>();
                 child.gameObject.AddComponent<EventTriggerExample>();
                 //child.gameObject.AddComponent<EventTriggerDelegateExample>();

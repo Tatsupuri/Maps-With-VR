@@ -3,6 +3,14 @@ using UnityEngine.EventSystems;
 
 public class EventTriggerExample : EventTrigger
 {
+
+    private Color originalColor;
+
+    private void Awake()
+    {
+        originalColor = GetComponent<Renderer>().material.color;
+    }
+
     public override void OnBeginDrag(PointerEventData data)
     {
         Debug.Log("OnBeginDrag called.");
@@ -62,6 +70,7 @@ public class EventTriggerExample : EventTrigger
     public override void OnPointerExit(PointerEventData data)
     {
         Debug.Log("OnPointerExit called.");
+        this.GetComponent<Renderer>().material.color = originalColor;
     }
 
     public override void OnPointerUp(PointerEventData data)
